@@ -16,7 +16,7 @@ const App = () => {
       <SafeAreaView>
         <View>
           <Typography color={'black'} weight={'bold'} size={27}>
-            Some Text
+            Fix bugs from dev-1
           </Typography>
 
           <InputText label={'Email'} />
