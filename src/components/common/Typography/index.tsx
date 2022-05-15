@@ -5,13 +5,11 @@ import {IColors} from '../../../utils';
 
 enum IWeight {
   bold = '700',
-  medium = '500',
   regular = '400',
   light = '300',
 }
 enum IFontFamily {
   bold = 'Lato-Bold',
-  medium = 'Lato-Medium',
   regular = 'Lato-Regular',
   light = 'Lato-Light',
 }

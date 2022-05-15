@@ -1,8 +1,9 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
+import {Button, SafeAreaView, View} from 'react-native';
 import * as eva from '@eva-design/eva';
 import {ApplicationProvider} from '@ui-kitten/components';
 import {InputText, Typography} from './src/components/common';
+import Crash from 'appcenter-crashes';
 
 const App = () => {
   // useEffect(() => {
@@ -15,11 +16,17 @@ const App = () => {
     <ApplicationProvider {...eva} theme={eva.light}>
       <SafeAreaView>
         <View>
-          <Typography color={'black'} weight={'bold'} size={27}>
+          <Typography color={'black'} size={27}>
             Hello World
           </Typography>
 
           <InputText label={'Email'} />
+          <Button
+            title={'Crash'}
+            onPress={() => {
+              Crash.generateTestCrash().catch(console.log);
+            }}
+          />
         </View>
       </SafeAreaView>
     </ApplicationProvider>
